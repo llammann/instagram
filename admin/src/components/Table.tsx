@@ -1,4 +1,8 @@
 import "./../assets/style/Sty.scss";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import type { RootState, store } from "./../redux/store";
+import { getAllUsers } from "./../redux/slices/HomeSlice";
 
 import { useState } from "react";
 import type { TableProps } from "antd";
@@ -42,8 +46,20 @@ const data: DataType[] = [
     address: "London No. 2 Lake Park",
   },
 ];
+import { HomeState } from "./../redux/slices/HomeSlice";
+export type AppDispatch = typeof store.dispatch;
+export const useAppDispatch: () => AppDispatch = useDispatch;
 
 const Tablex: React.FC = () => {
+  const dispatch = useDispatch();
+  const users = useSelector((state: RootState) => state.homepage.users);
+
+  useEffect(() => {
+    useAppDispatch(getAllUsers());
+  }, [dispatch]);
+
+  console.log("allllUSERSS", users);
+
   const [filteredInfo, setFilteredInfo] = useState<
     Record<string, FilterValue | null>
   >({});
@@ -120,7 +136,7 @@ const Tablex: React.FC = () => {
         <Button onClick={setAgeSort}>Sort age</Button>
         <Button onClick={clearFilters}>Clear filters</Button>
         <Button onClick={clearAll}>Clear filters and sorters</Button>
-        <input type="text" placeholder="Search user..."/>
+        <input type="text" placeholder="Search user..." />
       </Space>
       <Table columns={columns} dataSource={data} onChange={handleChange} />
     </>

@@ -2,11 +2,14 @@ import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Button, Checkbox, Form, Input } from "antd";
 
 import { useDispatch } from "react-redux";
-import { isLogin } from "./../redux/slices/LoginSlice";
+import { store } from "../redux/store";
+import { isLogin } from "./../redux/slices/HomeSlice";
 type Props = {};
+export type AppDispatch = typeof store.dispatch;
+export const useAppDispatch: () => AppDispatch = useDispatch;
 
 function Login({}: Props) {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const admin = {
     username: "",
     password: "",
