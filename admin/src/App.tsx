@@ -1,15 +1,13 @@
-import Tablex from "./components/Table";
 import "./App.css";
+import { routes } from "./routes/index";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const router = createBrowserRouter(routes);
 
 function App() {
   return (
     <>
-      <h1>go to hell</h1>
-      <section className="table">
-        <div className="container">
-          <Tablex />
-        </div>
-      </section>
+      <RouterProvider router={router} />
     </>
   );
 }

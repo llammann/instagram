@@ -1,3 +1,5 @@
+import "./../assets/style/Sty.scss";
+
 import { useState } from "react";
 import type { TableProps } from "antd";
 import { Button, Space, Table } from "antd";
@@ -118,6 +120,7 @@ const Tablex: React.FC = () => {
         <Button onClick={setAgeSort}>Sort age</Button>
         <Button onClick={clearFilters}>Clear filters</Button>
         <Button onClick={clearAll}>Clear filters and sorters</Button>
+        <input type="text" placeholder="Search user..."/>
       </Space>
       <Table columns={columns} dataSource={data} onChange={handleChange} />
     </>
