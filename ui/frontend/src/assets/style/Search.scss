@@ -1,0 +1,92 @@
+.searchSection {
+    width: 100%;
+    padding-top: 80px;
+    background: #a9d2ff;
+
+    .container {
+        width: 80%;
+        margin: auto;
+        // background-color: rgb(196, 221, 181);
+
+        .search {
+            width: 100%;
+            margin: auto;
+            // background-color: rgb(100, 96, 191);
+
+            input {
+                box-sizing: border-box;
+                width: 100%;
+                padding: 15px 0 15px 15px;
+                border-radius: 15px;
+                border: none;
+                box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.resultSection {
+    background: #a9d2ff;
+    width: 100%;
+    padding-top: 15px;
+    height: 200vh;
+
+    .container {
+        width: 80%;
+        margin: auto;
+
+        ul {
+            width: 100%;
+            margin: auto;
+            background: #7984ee;
+            border-radius: 15px;
+
+          a {
+            text-decoration: none;
+            li {
+                border-bottom: 2px solid #a9d2ff;
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                padding: 20px 0 10px 0;
+                width: 100%;
+                margin-left: 20px;
+
+
+                .left {
+                    margin-right: 6px;
+
+                    .imgWrapper {
+                        width: 70px;
+                        height: 70px;
+                        overflow: hidden;
+
+                        img {
+                            box-sizing: border-box;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border-radius: 50%;
+                            border: 2px solid #6730ec;
+                        }
+                    }
+                }
+
+                .right {
+                    .details {
+                        .username {
+                            font-size: 20px;
+                            padding-bottom: 10px;
+                        }
+
+                        .bio {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+          }
+        }
+    }
+}

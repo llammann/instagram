@@ -4,7 +4,6 @@ type Props = {};
 function UserRoot({}: Props) {
   return (
     <>
-      <h1>UserRoot</h1>
       <Outlet />
     </>
   );

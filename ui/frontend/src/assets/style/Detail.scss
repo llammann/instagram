@@ -1,0 +1,190 @@
+.detailUserSection {
+    width: 100%;
+    // height: 90vh;
+    background: #a9d2ff;
+    padding-top: 80px;
+    padding-bottom: 30px;
+
+    .container {
+        width: 80%;
+        margin: auto;
+
+        // background-color: rgb(196, 221, 181);
+
+        .info {
+            width: 50%;
+            margin: auto;
+            // background-color: rgb(100, 96, 191);
+            text-align: center;
+
+            .header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: start;
+                // background-color: rgb(96, 191, 126);
+
+                .profile {
+
+                    .imgWrapper {
+                        width: 100px;
+                        height: 100px;
+                        overflow: hidden;
+
+
+                        img {
+                            box-sizing: border-box;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border-radius: 50%;
+                            border: 2px solid #6730ec;
+
+                        }
+                    }
+                }
+
+                .article {
+                    margin-top: 15px;
+                    margin-bottom: 10px;
+
+                    .username {
+                        font-size: 25px;
+                        font-weight: 900;
+                        // padding-bottom: 8px;
+                    }
+
+                    .country {
+                        font-size: 15px;
+                        font-weight: 500;
+                    }
+                }
+
+            }
+
+            .buttons {
+                width: 100%;
+                padding-bottom: 30px;
+
+                .follow,
+                .message {
+                    width: 35%;
+                    padding: 4px 0;
+                    border-radius: 6px;
+                    // border: none;
+                    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+
+                }
+
+                .follow {
+                    margin-right: 10px;
+                    background-color: #d2f6fc;
+                    color: #7984ee;
+
+                }
+
+                .message {
+                    background-color: #7984ee;
+                    color: #d2f6fc;
+                }
+            }
+
+            .follower {
+                // background-color: #7d7492;
+
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                div {
+
+                    .count {
+                        font-size: 18px;
+                        font-weight: 700;
+                    }
+
+                    :nth-child(2) {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+.Userposts {
+    width: 100%;
+    height: 400vh;
+    background: #1d2674;
+    padding-top: 80px;
+
+    .container {
+        width: 80%;
+        margin: auto;
+        padding: 40px 10px;
+        // background-color: #6730ec;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+
+        .allPosts {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            flex-wrap: wrap;
+
+            .post {
+                width: 30%;
+                margin: 10px;
+                margin-bottom: 40px;
+                background-color: #a9d2ff;
+                border-radius: 4px;
+                overflow: hidden;
+
+                .imgWrapper {
+                    width: 100%;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+
+                }
+
+                .article {
+                    padding: 20px 15px;
+
+                    // background-color: red;
+                    p {
+                        // background-color: yellow;
+                    }
+                }
+
+                .buttons {
+                    padding: 20px;
+                    display: flex;
+                    // align-items: end;
+                    justify-content: end;
+
+                    .like {
+                        margin-right: 15px;
+                    }
+
+                    button {
+                        border: none;
+                        background-color: transparent;
+                        font-size: 40px;
+                        color: #1d2674;
+                        cursor: pointer;
+
+
+                    }
+                }
+            }
+        }
+
+
+
+    }
+}
