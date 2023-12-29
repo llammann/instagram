@@ -35,6 +35,7 @@ const userAuthMid = (req, res, next) => {
       } else {
         console.log("there is not");
         res.status(403).send();
+        return;
       }
 
       // checking refresh token

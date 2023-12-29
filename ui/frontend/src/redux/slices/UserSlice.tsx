@@ -93,6 +93,29 @@ export const UserSlice = createSlice({
         state.searchedValue = data;
       }
     },
+
+
+    // follow: (state, action: PayloadAction<string>) => {
+    //   console.log("search", action.payload);
+    //   // const token = JSON.parse(localStorage.getItem("token") || "{}");
+    //   // // console.log("your token", token.refToken);
+
+    //   // axios
+    //   //   .patch(`http://localhost:3333/${action.payload}`, {
+    //   //     headers: {
+    //   //       Authorization: `Bearer ${token.token}`,
+    //   //       RefreshToken: `Bearer ${token.refToken}`,
+    //   //     },
+    //   //   })
+    //   //   .then((res) => {
+    //   //     // console.log("buraaa", res.data);
+    //   //     data = res.data;
+    //   //   });
+
+    //  let user =JSON.parse(localStorage.getItem("loggedUser") || {})
+
+    //  user.following.push()
+    // },
   },
 
   extraReducers: (builder) => {

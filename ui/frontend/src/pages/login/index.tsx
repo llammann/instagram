@@ -61,6 +61,28 @@ function Login() {
                     if (res.status == 222) {
                       alert("Welcome!");
                       navigate("/home");
+
+                      const token = JSON.parse(
+                        localStorage.getItem("token") || "{}"
+                      );
+                      axios
+                        .get("http://localhost:3333/users", {
+                          headers: {
+                            Authorization: `Bearer ${token.token}`,
+                            RefreshToken: `Bearer ${token.refToken}`,
+                          },
+                        })
+                        .then((res) => {
+                          const data = res.data;
+                          let loginUser = data.find(
+                            (elem: any) => elem.username == values.username
+                          );
+                          // console.log("loginUser", loginUser);
+                          localStorage.setItem(
+                            "loggedUser",
+                            JSON.stringify(loginUser)
+                          );
+                        });
                     }
                     if (res.status == 221) {
                       alert("Login failed..");

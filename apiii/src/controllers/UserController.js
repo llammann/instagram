@@ -28,9 +28,11 @@ const getAllUsers = async (req, res) => {
 //     }
 //     console.log("after logout", refTokens);
 //     res.status(444).send("logout succesfully");
+//     return;
 //   } catch (error) {
 //     console.error("Logout failed", error);
 //     res.status(440).send("inter ser err");
+//     return;
 //   }
 // };
 
@@ -51,7 +53,7 @@ const login = async (req, res) => {
         { username: user.username, password: user.password },
         process.env.SECRET_TOKEN,
         {
-          expiresIn: "10s",
+          expiresIn: "10",
         }
       );
 
@@ -65,14 +67,15 @@ const login = async (req, res) => {
       console.log("tokenss", refTokens);
 
       res.status(222).send({ token, refToken });
+      // localStorage.setItem("loggedUser", JSON.stringify(validUser));
+      return;
     } else {
       res.status(221).send("no valid input");
+      return;
     }
-  } catch {
-    (error) => {
-      alert("limon", error);
-      return error;
-    };
+  } catch (error) {
+    console.error("Login error:", error);
+    res.status(500).send("Internal server error");
   }
 };
 // !login

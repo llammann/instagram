@@ -48,6 +48,8 @@
                     margin-top: 15px;
                     margin-bottom: 10px;
 
+
+
                     .username {
                         font-size: 25px;
                         font-weight: 900;
@@ -128,13 +130,14 @@
         box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
 
         .allPosts {
-            display: flex;
-            justify-content: space-between;
+            // display: flex;
+            // justify-content: space-between;
             width: 100%;
-            flex-wrap: wrap;
+            // flex-wrap: wrap;
 
             .post {
-                width: 30%;
+                // height: 340px;
+                // width: 30%;
                 margin: 10px;
                 margin-bottom: 40px;
                 background-color: #a9d2ff;
@@ -156,9 +159,10 @@
                     padding: 20px 15px;
 
                     // background-color: red;
-                    p {
-                        // background-color: yellow;
-                    }
+                    text-overflow: ellipsis;
+
+                    overflow: hidden;
+                    white-space: nowrap;
                 }
 
                 .buttons {
